@@ -1,0 +1,12 @@
+<odoo>
+<record id="viewe_infoecuriry_member_form_inherite" model="ir.ui.view">
+<field name="name">coupon.program.form.inherited</field>
+<field name="model">coupon.program</field>
+<field name="inherit_id" ref="coupon.coupon_program_view_form_common"/>
+<field name="arch" type="xml">
+<xpath expr="//field[@name='rule_minimum_amount']" position="after">
+ <field name="rule_maximum_amount" widget='monetary' options="{'currency_field': 'currency_id'}"  position="attributes"/>
+</xpath>
+</field>
+</record>
+</odoo>
